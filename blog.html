@@ -66,14 +66,40 @@
           text-align: center;
           float: right;
         }
+        #home{
+          z-index: 3;
+          position: relative;
+          float: left;
         
+          top:0;
+        }
+        a:link {
+          color: gold;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:visited {
+          color: gold;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        a:hover {
+          color: gold;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        a:active {
+          color: blue;
+          background-color: transparent;
+          text-decoration: underline;
+        }
 
 
   
     </style>
   </head>
   <body>
-      
+      <h1 id="home"><a href="./index.html">Home</a></h1>
         <div class="column" id="first"></div>
         <div class="column" id="second">
          <button type="button" id="insidepost" onclick="window.location='./firstpost.html'";>
