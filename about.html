@@ -1,106 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+<head>
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+      background-image:url(index.jpeg) ;
+    }
+
+    header {
+      flex-direction: row;
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.253);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    a{
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      text-decoration: none;
+      color: rgb(239, 255, 196);
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+
+    <h1>About Me</h1>
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pTumiel/Blog</title>
-    <style>
-      
-        body{
-         
-            background-image:url(th-2147869738.jpeg) ;
-            background-repeat: no-repeat;
-            background-size:cover;
-            height: 100%;
-        }
-        .column {
-            z-index: 2;
-            position: relative;
-            float: left;
-            width: 33.33%;
-         
-            height: 100%;
+  </header>
+  <main>
 
-        }
-        body, html {
-            height: 100%;
-        } 
-        #first{
-          float: left;
-          width: 25%;
-        }
-        #last{
-          
-          width: 25%;
-        }
-        #second{
-          width: 50%;
-   
-          float:top;
-       
-        }
-
-
-
-
-        #home{
-          z-index: 66;
-          position: absolute;
-          float: left;
-        
-          top:0;
-        }
-        a:link {
-          color: gold;
-          background-color: transparent;
-          text-decoration: none;
-        }
-        a:visited {
-          color: gold;
-          background-color: transparent;
-          text-decoration: none;
-        }
-        a:hover {
-          color: gold;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        a:active {
-          color: blue;
-          
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        .split{
-            height:33.33%;
-        }
-        #info{
-            color: rgb(77, 67, 67);
-        }
-
-
-  
-    </style>
-  </head>
-  <body>
-      <h1 id="home"><a href="./index.html">Home</a></h1>
-        <div class="column" id="first">
-         
-        </div>
-        <div class="column" id="second">
-            <div class="split"></div>
-            <div class="split" id="info">
-                <center><strong><font size=30>Peter Tumiel</font></strong></center>
-                <br>
-                <p style="padding: 10px; border: 2px solid red; background-color: black;">Currently learning about security vulnerabilites and how to avoid them. 
-                    Also learning about common attacks.
-    
-                    Currently doing my 3rd year BSc at University of Cape Town. I am studying Physics and Computer Science.</p>
-                
-            </div>
-            <div class="split"></div>
-      </div> 
-  </body>
+    <p>Hello! I'm a software developer with a passion for creating innovative and effective solutions to complex problems. With a strong background in computer science and several years of experience in the industry, I have the skills and expertise to bring your ideas to life.</p>
+    <p>I specialize in developing web and mobile applications using a variety of programming languages and technologies. I am constantly learning and expanding my skills to stay up to date with the latest developments in the industry.</p>
+    <p>When I'm not coding, you can find me hiking, reading, or trying out new recipes in the kitchen. If you'd like to learn more about me or my work, don't hesitate to reach out!</p>
+    <a href="./index.html" class="home"><h2>Home</h2></a>
+  </main>
+</body>
 </html>

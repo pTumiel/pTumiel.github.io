@@ -1,55 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pTumiel/Projects</title>
     <style>
-         #home{
-          z-index: 66;
-          position: absolute;
-          float: left;
+      body{
+        background-image: url("index.jpeg");
+        background-size: cover;
+      }
+      .project {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: azure;
+        border-radius: 6px;
+      }
+
+      .project h2 {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+        margin: 0;
+      }
+
+      .project:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px gray;
         
-          top:0;
+        z-index: 1;
+      }
+
+      .project-description {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px gray;
+        width: 50%;
+        height: 50%;
+        overflow: auto;
+      }
+
+      .project:hover .project-description {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .project {
+          width: 150px;
+          height: 150px;
         }
-        body, html {
-            height: 100%;
-        } 
-        a:link {
-          color: gold;
-          background-color: transparent;
-          text-decoration: none;
+      }
+
+      @media (max-width: 480px) {
+        .project {
+          width: 100px;
+          height: 100px;
         }
-        a:visited {
-          color: gold;
-          background-color: transparent;
-          text-decoration: none;
-        }
-        a:hover {
-          color: gold;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        a:active {
-          color: blue;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        body{
-         
-         background-image:url(th-2147869738.jpeg) ;
-         background-repeat: no-repeat;
-         background-size:cover;
-         height: 100%;
-     }
-  
+      }
+      a{
+        color:rgb(239, 255, 196);
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-    <h1 id="home"><a href="./index.html">Home</a></h1>
+    <a href="./index.html"><h1>Home</h1></a>
+    <div id="projectsContainer"></div>
 
+    <script>
+      const projects = [
+        {
+          title: "Project Title 1",
+          description: "Project Description 1",
+          background: "url(image1.jpg)"
+        },
+        {
+          title: "Project Title 2",
+          description: "Project Description 2",
+          background: "url(image2.jpg)"
+        }
+      ];
+
+      const projectsContainer = document.getElementById("projectsContainer");
+
+      projects.forEach(function(project) {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("project");
+        projectElement.style.backgroundImage = project.background;
+        projectElement.innerHTML = `
+          <h2>${project.title}</h2>
+          <div class="project-description">${project.description}</div>
+        `;
+        projectsContainer.appendChild(projectElement);
+      });
+    </script>
   </body>
 </html>

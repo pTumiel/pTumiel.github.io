@@ -1,213 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head> 
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W62H1G2BWG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-W62H1G2BWG');
-</script>
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<title>pTumiel</title>
-    <style>
-        * {margin: 0; padding: 0;}
-        body {background: black;}
-canvas {display: block;}
-.Matrix{
-    z-index: -1;
-    position: absolute;
-}
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap');
-
-
-.box {
-    z-index: 1;
-    float: left;
-    width: 33%;
-    background-color: black;
-    background: rgba(0, 0, 0, 0);
-    text-align: center;
-    color: #fff;
-    margin:1px;
-    border:1px white;
-  }
-p{
-    z-index: 1;
-    color: #fff;
-    
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-
-
-}
-
-    
-#name {
-    
-    animation: fadeInAnimation ease 4s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    color: #4e9a06;
-
-
-
-
-    animation: fadeOutAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-@keyframes fadeOutAnimation {
-    100%{
-        opacity:1;
-    }
-    100%{
-        opacity:0;
-    }
-}
-
-#top,
-#bottom {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 50%;
-}
-
-#top {
-    top: 0;
-    /* background-color: orange; */
-}
-
-#bottom {
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-#column{
-    /* background-color:  	#333333; */
-    width:15%;
-    height:30%;
-    align-items: center;
-    text-align: center;
-    margin:5%;
- 
-    /* overflow: hidden; */
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    text-align: center;
-    color:  #fff;
-    font-size: 250%;
-    font-family: 'Albert Sans', sans-serif;
-    
-   
-}
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-@media screen and (max-width: 1000px) {
-    #bottom{
-        flex-direction: column;
-        justify-content: center;
-
-        align-items: center;
-    }
-    #column{
-        width:50%;
-        height: 100%;
-    }
-
-
-}
-
-
-</style>
-
-
-
-
-</head>
-
-<body>
-
-    <div id="temp">
-        <p style="text-align:center" id="name">Peter Tumiel</p>
-        <script>
-            var id = null;
-            function myMove() {
-            var elem = document.getElementById("name");
-            var pos = 0;
-            clearInterval(id);
-            id = setInterval(frame, 10);
-            function frame() {
-                if (pos <= -400) {
-                clearInterval(id);
-                } else {
-                pos-=2;
-                elem.style.top = pos + 'px';
-              
-                }
-            }
-            }
-            setTimeout(myMove,500); 
-        </script>
-        
+    <div class="container">
+      <div class="center-left">
+        <img src="Hexagon.png" alt="Logo" class="image">
+      </div>
+      <div class="center-right">
+        <h1>Hello<br>Welcome to my personal Site</h1>
+        <p class="glow"><b>Here, you can learn about my background, view my portfolio, and get a glimpse into the things that make me who I am. This includes a section about me and the recent projects I have completed.</b></p>
+        <div id="bottombutton">
+         <a href="./about.html"><button class="button">About Me</button></a>
+          <a href="./project.html"><button class="button">Projects</button></a>
+        </div>
+       
+      </div>
     </div>
-    <div id="top"></div>
-    <div id="bottom">
-        <div id="column" class="project"><b><a href="./project.html" style="text-decoration: none;">/Projects</a></b></div>
-        <div id="column" class="blog"><b><a href="./blog.html" style="text-decoration: none;">/Blog</a></b></div>
-        <div id="column" class="about"><b><a href="./about.html" style="text-decoration: none;">/About</a></b></div>
-    </div>
-
-    <canvas id="Matrix"></canvas>
-    </body>
-    <script src="./index.js"></script>
-    
+  </body>
+</html>
 
 
 
-    
 
-</body>
