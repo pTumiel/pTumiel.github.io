@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap" rel="stylesheet">
+
+
     <style>
       body{
         background-image: url("index.jpeg");
@@ -18,13 +23,18 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
-        background-color: azure;
+        background-size: 100% 100%;
+        background-color: rgb(85, 85, 94);
         border-radius: 6px;
+        border: 3px solid rgb(0, 0, 0);
+        
+        
       }
-
+      *{
+        font-family: 'Albert Sans', sans-serif;
+      }
       .project h2 {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.767);
         border-radius: 5px;
         color: white;
         padding: 10px;
@@ -47,9 +57,14 @@
         background-color: white;
         padding: 20px;
         box-shadow: 0 0 10px gray;
-        width: 50%;
-        height: 50%;
+        width: 75%;
+        height: 75%;
         overflow: auto;
+
+        background-color: black;
+        font-size: large;
+        color: white;
+        overflow: hidden;
       }
 
       .project:hover .project-description {
@@ -82,14 +97,19 @@
     <script>
       const projects = [
         {
-          title: "Project Title 1",
-          description: "Project Description 1",
-          background: "url(image1.jpg)"
+          title: "Top Down Shooting Game",
+          description: "Using the python arcade package I developed a simple shooting game. The number of enemies increases as well as their health each round and follows a logistic growth.",
+          background: "url(zombie.png)"
         },
         {
-          title: "Project Title 2",
-          description: "Project Description 2",
-          background: "url(image2.jpg)"
+          title: "Android Apps",
+          description: "Using Java and Android Studio I developed an android calculator app that includes a pseudo-random generator.",
+          background: "url(android_logo_PNG32.png)"
+        },
+        {
+          title: "Ethernet Data Transfer at subnanosecond accuracy.",
+          description: "Using the C language a low delay high accuracy data transmission system was developed. This was used to detect coincident gamma ray particles at a seperate machine connected via ethernet.",
+          background: "url(Figure_33_01_05.jpg)"
         }
       ];
 
