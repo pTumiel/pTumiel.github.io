@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on The Laws Of The Universe</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on The Laws Of The Universe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Feb 2023 10:20:13 +0200</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First P Post</title>
+      <link>http://example.org/posts/first-p-post/</link>
+      <pubDate>Sun, 12 Feb 2023 10:20:13 +0200</pubDate>
+      
+      <guid>http://example.org/posts/first-p-post/</guid>
+      <description>Introduction This is bold text, and this is emphasized text.
+Visit the Hugo website!</description>
+    </item>
+    
+  </channel>
+</rss>
