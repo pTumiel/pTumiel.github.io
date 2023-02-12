@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="generator" content="Hugo 0.92.2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+body {
+  background-image: url('./images/index.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  height: 100%;
+}
+.center-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: 20px;
+}
+.center-left img {
+  height: 250px;
+  width: auto;
+}
+.center-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: left;
+  flex: 1;
+  text-align: center;
+  padding: 0 50px;
+  width: 500px;
+  
+}
+.center-right h1 {
+  font-size: 40px;
+
+  margin: 0;
+  color: rgb(239, 255, 196);
+}
+.center-right p {
+  font-size: 20px;
+  color: white;
+  margin: 20px 0;
+  text-align:justify;
+}
+.center-right button {
+
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+ 
+  color: rgb(255, 255, 255);
+  background-color: rgba(139, 129, 129, 0.39);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.5s;
+  border-radius: 5px;
+  font-family: 'Albert Sans', sans-serif;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    padding: 25px;
+  }
+  .center-right {
+    padding: 25px;
+    width: 400px;
+  }
+  .center-left img{
+    height: 150px;
+    }
+  } 
+
+
+
+.bottombutton{
+  display: flex;
+  flex-direction: row;
+}
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+
+  
+
+  animation: rotation 25s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glow {
+  
+  color: #fff;
+  text-align: center;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #fff, 0 0 30px rgba(255, 217, 0, 0.185), 0 0 40px rgba(255, 217, 0, 0.397), 0 0 50px rgba(110, 96, 15, 0.418), 0 0 60px rgba(255, 217, 0, 0.767), 0 0 70px rgb(255, 215, 0);
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px rgba(0, 0, 0, 0.055), 0 0 40px rgba(0, 0, 0, 0.26), 0 0 50px rgba(0, 0, 0, 0.596), 0 0 60px rgba(0, 0, 0, 0.712), 0 0 70px rgba(0, 0, 0, 0.055), 0 0 80px rgba(0, 0, 0, 0.486);
+  }
+}
+    </style>
+  </head>
+  
+  <body>
+
+    <div class="container">
+      <div class="center-left">
+        <img src="./images/Hexagon.png" alt="Logo" class="image">
+      </div>
+      <div class="center-right">
+        <h1>Hello<br>Welcome to my personal Site</h1>
+        <p class="glow"><b>Here, you can learn about my background, view my portfolio, and get a glimpse into the things that make me who I am. This includes a section about me and the recent projects I have completed.</b></p>
+        <div id="bottombutton">
+          <a href="./about.html"><button class="button">About Me</button></a>
+          <a href="./project.html"><button class="button">Projects</button></a>
+          <a href="./posts/"><button class="button">Blog</button></a>
+        </div>
+       
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+

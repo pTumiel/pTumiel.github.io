@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+      body{
+        background-image: url("./images/index.jpeg");
+        background-size: cover;
+      }
+      .project {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-color: rgb(85, 85, 94);
+        border-radius: 6px;
+        border: 3px solid rgb(0, 0, 0);
+        
+        
+      }
+      *{
+        font-family: 'Albert Sans', sans-serif;
+      }
+      .project h2 {
+        background-color: rgba(0, 0, 0, 0.767);
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+        margin: 0;
+      }
+
+      .project:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px gray;
+        
+        z-index: 1;
+      }
+
+      .project-description {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px gray;
+        width: 75%;
+        height: 75%;
+        overflow: auto;
+
+        background-color: black;
+        font-size: large;
+        color: white;
+        overflow: hidden;
+      }
+
+      .project:hover .project-description {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .project {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      a{
+        color:rgb(239, 255, 196);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html"><h1>Home</h1></a>
+    <div id="projectsContainer"></div>
+
+    <script>
+      const projects = [
+        {
+          title: "Top Down Shooting Game",
+          description: "Using the python arcade package I developed a simple shooting game. The number of enemies increases as well as their health each round and follows a logistic growth.",
+          background: "url(./images/zombie.png)"
+        },
+        {
+          title: "Android Apps",
+          description: "Using Java and Android Studio I developed an android calculator app that includes a pseudo-random generator.",
+          background: "url(./images/android_logo_PNG32.png)"
+        },
+        {
+          title: "Ethernet Data Transfer at subnanosecond accuracy.",
+          description: "Using the C language a low delay high accuracy data transmission system was developed. This was used to detect coincident gamma ray particles at a seperate machine connected via ethernet.",
+          background: "url(./images/Figure_33_01_05.jpg)"
+        },
+        {
+          title: "X-ray hand image alignment",
+          description: "Using x-ray images of hands the images are removed of clutter and aligned to a common axis. The hands are grouped into similar categories by k-means clustering. The commonly aligned images can then be used for machine learning.",
+          background: "url(./images/hand.jpeg)"
+        }
+        
+      ];
+
+      const projectsContainer = document.getElementById("projectsContainer");
+
+      projects.forEach(function(project) {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("project");
+        projectElement.style.backgroundImage = project.background;
+        projectElement.innerHTML = `
+          <h2>${project.title}</h2>
+          <div class="project-description">${project.description}</div>
+        `;
+        projectsContainer.appendChild(projectElement);
+      });
+    </script>
+  </body>
+</html>
