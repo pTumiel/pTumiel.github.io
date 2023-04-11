@@ -33,10 +33,11 @@
 <p>I used <img src="https://www.fast.ai/" alt="fastai"> to do this. I would highly recommend it if you are at all interested in deep learning. It has you building real projects on the first lesson instead of learning more maths.</p>
 <p>I won&rsquo;t delve too deeply into the code. It follows a lot of what Jeremy Howard did in his notebook <img src="https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data" alt="here">. But I&rsquo;ll add the stuff I did.</p>
 <p>This section expands on the previous code by adding 4 different categories to create the model.</p>
-<p>searches = &lsquo;2017 f1 car&rsquo;,&lsquo;2020 f1 car&rsquo;,&lsquo;2021 f1 car&rsquo;, &lsquo;2022 f1 car&rsquo;
-path = Path(&lsquo;caryear&rsquo;)
-from time import sleep</p>
-<pre><code>for o in searches:
+<pre><code>searches = '2017 f1 car','2020 f1 car','2021 f1 car', '2022 f1 car'
+path = Path('caryear')
+from time import sleep
+
+for o in searches:
 
 dest = (path/o)
 
