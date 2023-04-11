@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>Deep_Learning | The Laws Of The Universe</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+		
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">The Laws Of The Universe</a>
+	
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+		<div class="single block">
+			<article class="entry">
+				<h1 class="entry__title">Deep_Learning</h1>
+				<div class="entry__content"><hr>
+<h2 id="introduction">Introduction</h2>
+<p>ChatGPT is pretty popular now. Maybe you even have GPT4. These are really amazing tools. I thought I could try recreate my own small version of this.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Lewis_Hamilton_2020_Tuscan_Grand_Prix_-_race_day_%28cropped%29.jpg/1920px-Lewis_Hamilton_2020_Tuscan_Grand_Prix_-_race_day_%28cropped%29.jpg" alt=""></p>
+<p>Often I find when undertaking a new project I get motivated for the first day and then completely lose this the next day. I found a good way to battle this is to combine interests with the new project. I really enjoy watching F1 and how the cars change year after year. In order to complete an AI project I combined this and AI. So I decided to create an AI model that can detect which year an F1 car is from based on an image.</p>
+<p>I used <img src="https://www.fast.ai/" alt="fastai"> to do this. I would highly recommend it if you are at all interested in deep learning. It has you building real projects on the first lesson instead of learning more maths.</p>
+<p>I won&rsquo;t delve too deeply into the code. It follows a lot of what Jeremy Howard did in his notebook <img src="https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data" alt="here">. But I&rsquo;ll add the stuff I did.</p>
+<p>This section expands on the previous code by adding 4 different categories to create the model.</p>
+<p>searches = &lsquo;2017 f1 car&rsquo;,&lsquo;2020 f1 car&rsquo;,&lsquo;2021 f1 car&rsquo;, &lsquo;2022 f1 car&rsquo;
+path = Path(&lsquo;caryear&rsquo;)
+from time import sleep</p>
+<pre><code>for o in searches:
+
+dest = (path/o)
+
+dest.mkdir(exist_ok=True, parents=True)
+
+download_images(dest, urls=search_images(f'{o} race'))
+
+sleep(10)  # Pause between searches to avoid over-loading server
+
+download_images(dest, urls=search_images(f'{o} on track'))
+
+sleep(10)
+
+resize_images(path/o, max_size=400, dest=path/o)
+</code></pre>
+<p>These are downloaded and stored in a corresponding directory.</p>
+<pre><code>dls = DataBlock(
+
+blocks=(ImageBlock, CategoryBlock), 
+
+get_items=get_image_files, 
+
+splitter=RandomSplitter(valid_pct=0.2, seed=42),
+
+get_y=parent_label,
+
+item_tfms=[Resize(192, method='squish')]
+</code></pre>
+<p>).dataloaders(path, bs=32)</p>
+<p>dls.show_batch(max_n=10)</p>
+<p>This part of the notebook is critical as it creates the model. This DataBlock creates the type of model that will be predicted so in this case a set of images that are categorical. When this DataBlock is created a training set is needed to train the model so it can have accurate metrics. The images are also resized by quishing them since they all have to be the same size.</p>
+<p>This took about 10 seconds to train for me and I got about 80% accuracy. I gave the model an image of Lewis Hamilton&rsquo;s 2017 F1 car at it predicted it to be a 2017 F1 car with 97% accuracy.</p>
+</div>
+				
+			</article>
+		</div>
+	</main>
+	
+	
+
+
+
+	
+
+	</div>
+	<footer class="footer">
+	<div class="footer__copyright">© 2023 The Laws Of The Universe. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+</body>
+</html>

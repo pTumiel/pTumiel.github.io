@@ -6,7 +6,16 @@
     <description>Recent content in Posts on The Laws Of The Universe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Feb 2023 10:20:13 +0200</lastBuildDate><atom:link href="https://pTumiel.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2023 18:56:29 +0200</lastBuildDate><atom:link href="https://pTumiel.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep_Learning</title>
+      <link>https://pTumiel.github.io/posts/deep_learning/</link>
+      <pubDate>Tue, 11 Apr 2023 18:56:29 +0200</pubDate>
+      
+      <guid>https://pTumiel.github.io/posts/deep_learning/</guid>
+      <description>I thought with all the hype around chatgpt I would take a dive into creating my own AI.</description>
+    </item>
+    
     <item>
       <title>The Island Of Stability</title>
       <link>https://pTumiel.github.io/posts/first-p-post/</link>
