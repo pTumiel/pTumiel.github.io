@@ -64,9 +64,10 @@ splitter=RandomSplitter(valid_pct=0.2, seed=42),
 get_y=parent_label,
 
 item_tfms=[Resize(192, method='squish')]
+).dataloaders(path, bs=32)
+
+dls.show_batch(max_n=10)
 </code></pre>
-<p>).dataloaders(path, bs=32)</p>
-<p>dls.show_batch(max_n=10)</p>
 <p>This part of the notebook is critical as it creates the model. This DataBlock creates the type of model that will be predicted so in this case a set of images that are categorical. When this DataBlock is created a training set is needed to train the model so it can have accurate metrics. The images are also resized by quishing them since they all have to be the same size.</p>
 <p>This took about 10 seconds to train for me and I got about 80% accuracy. I gave the model an image of Lewis Hamilton&rsquo;s 2017 F1 car at it predicted it to be a 2017 F1 car with 97% accuracy.</p>
 </div>
