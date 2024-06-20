@@ -1,4 +1,0 @@
-This is a test file for random blogs.
-Need to add more blog post.
-Make it on progress with ML RL DL
-Been a while since I've worked on this
