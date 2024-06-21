@@ -1,0 +1,10 @@
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+
+These commands add the necessary environment variables to your .bashrc file, which is a script that runs whenever you start a new terminal session. Specifically:
+
+    export GEM_HOME="$HOME/gems": Sets the installation directory for Ruby Gems to a gems directory in your home folder.
+    export PATH="$HOME/gems/bin:$PATH": Adds the directory for executable gem files to your system's PATH, allowing you to run installed gems from the command line.
+
+
