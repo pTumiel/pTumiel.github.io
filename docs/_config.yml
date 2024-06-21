@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 color_scheme: dark
 # Build settings
-remote_theme: just-the-docs
+theme: just-the-docs
+
 plugins:
   - jekyll-feed
 nav:
