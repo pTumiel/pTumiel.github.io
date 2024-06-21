@@ -28,23 +28,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-color_scheme: dark
-# Build settings
-theme: just-the-docs
 
+# Build settings
+theme: minima
 plugins:
   - jekyll-feed
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "Section 1"
-    url: "/section1/"
-    nav_order: 1
-    children:
-      - title: "Page 1.1"
-        url: "/section1/page1.1"
-      - title: "Page 1.2"
-        url: "/section1/page1.2"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
