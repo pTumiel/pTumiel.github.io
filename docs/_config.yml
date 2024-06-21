@@ -28,12 +28,30 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-
+color_scheme: dark
 # Build settings
 theme: just-the-docs
 plugins:
   - jekyll-feed
-
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Section 1"
+    url: "/section1/"
+    nav_order: 1
+    children:
+      - title: "Page 1.1"
+        url: "/section1/page1.1"
+      - title: "Page 1.2"
+        url: "/section1/page1.2"
+  - title: "Section 2"
+    url: "/section2/"
+    nav_order: 2
+    children:
+      - title: "Page 2.1"
+        url: "/section2/page2.1"
+      - title: "Page 2.2"
+        url: "/section2/page2.2"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
