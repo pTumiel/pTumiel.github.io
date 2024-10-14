@@ -14,7 +14,7 @@ author:
   email:             markdotto@gmail.com
 
 # Gems
-theme_color: dark
+
 
 plugins:
   - jekyll-paginate
